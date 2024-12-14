@@ -12,5 +12,5 @@ RUN npm install || yarn install
 EXPOSE 8000
 
 
-CMD [ "node", "start" ]
+CMD [ "npm", "start" ]
 # CMD ["pm2-docker", "start", "index.js", "--name", "queen-anita"]
