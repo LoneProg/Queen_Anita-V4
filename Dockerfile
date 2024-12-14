@@ -20,4 +20,5 @@ COPY . .
 EXPOSE 8000
 
 # Start the app using npm start
-CMD ["pm2-docker", "start", "index.js", "--name", "queen-anita"]
+CMD [ "node", "." ]
+# CMD ["pm2-docker", "start", "index.js", "--name", "queen-anita"]
