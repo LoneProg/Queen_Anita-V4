@@ -1,5 +1,6 @@
 # # Use Node.js 14 as the base image
-FROM node:20.17.0
+FROM quay.io/suhailtechinfo/suhail-v2
+
 
 # Set the working directory in the container
 WORKDIR /app
