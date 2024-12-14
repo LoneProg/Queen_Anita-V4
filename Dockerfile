@@ -1,25 +1,16 @@
-# # Use Node.js 14 as the base image
 FROM quay.io/suhailtechinfo/suhail-v2
 
+RUN git clone https://github.com/LoneProg/Queen_Anita-V4 /root/queen-anita-v4
 
 # Set the working directory in the container
-WORKDIR /app
-
-# Copy the package.json and package-lock.json files to the container
-COPY package*.json ./
+WORKDIR /root/queen-anita-v4
 
 # Install the dependencies
-RUN npm install -g npm@latest
-
-RUN npm install -g pm2@latest
-
-RUN npm install 
-# Copy the rest of the app files to the container
-COPY . .
+RUN npm install || yarn install
 
 # Expose port 3000 for the app
 EXPOSE 8000
 
-# Start the app using npm start
-CMD [ "node", "." ]
+
+CMD [ "node", "start" ]
 # CMD ["pm2-docker", "start", "index.js", "--name", "queen-anita"]

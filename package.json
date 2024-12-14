@@ -7,15 +7,16 @@
      "node": ">=20.0.0"
   },
   "scripts": {
-    "start": "pm2 start . --attach --name Queen_Anita-V4",
-    "stop": "pm2 stop Queen_Anita-V4",
-    "run": "pm2 start. --deep-monitoring --attach --name Queen_Anita-V4",
+    "start": "pm2 start . --attach --name queen_anita",
+    "stop": "pm2 stop queen_anita",
+    "run": "pm2 start . --deep-monitoring --attach --name queen_anita",
     "dbs--postinstall": "npx puppeteer@latest install --y"
   },
   "author": "base",
   "license": "MIT",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.9",
+    "pm2": "^5.3.0",
     "awesome-phonenumber": "^2.64.0",
     "@hapi/boom": "^10.0.1",
     "axios": "^1.6.8",
@@ -53,9 +54,6 @@
     "wa-sticker-formatter": "^4.4.4",
     "yargs": "^17.7.2",
     "yt-search": "^2.12.1"
-  },
-  "devDependencies": {
-    "pm2": "^5.3.0"
   },
   "version": "1.0.0",
   "directories": {
